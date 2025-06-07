@@ -2,7 +2,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:beykoz_nav/pages/langauges.dart';
+//import 'package:beykoz_nav/pages/langauge_selection_dart.dart';
 import 'package:beykoz_nav/pages/noti.dart';
 import 'package:beykoz_nav/pages/feedback.dart';
 
@@ -97,16 +97,28 @@ class _SettingState extends State<Setting> {
           ),
           const SizedBox(height: 30),
           _sectionTitle('GENERAL'),
-          _settingsTile(
-            context,
-            Icons.language,
-            'Language',
-            'Change app language',
-            screen: Langauges(
-              locale: widget.locale,
-              onLanguageChanged: widget.onLanguageChanged,
-            ),
-          ),
+         // _settingsTile(
+          //  context,
+          //  Icons.language,
+          //  'Language',
+          //  'Change app language',
+           // onTap: () async {
+             // final selectedLocale = await Navigator.push(
+               // context,
+               // MaterialPageRoute(
+                 // builder: (_) => LanguageSelectionScreen(
+                //    currentLocale: widget.locale,
+               //   ),
+             //   ),
+            //  );
+
+           //   if (selectedLocale != null && selectedLocale is Locale) {
+            //    widget.onLanguageChanged(selectedLocale); // Update app locale
+           //   }
+        //    },
+       //   ),
+
+
           _settingsTile(
             context,
             Icons.notifications,

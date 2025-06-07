@@ -1,6 +1,8 @@
+import 'package:beykoz_nav/l10n/app_localizations.dart';
 import 'package:beykoz_nav/pages/splash_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:beykoz_nav/components/nati_api.dart'; // Import your notification API
+import 'package:beykoz_nav/components/nati_api.dart';
+import 'package:beykoz_nav/l10n/L10n.dart';// Import your notification API
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized(); // Required before async code
@@ -19,6 +21,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Color(0xFFB71C1C),
       ),
+      supportedLocales: L10n.supportedLocales,
+      locale: const Locale('en'),
+      localizationsDelegates: const [
+        AppLocalizations.delegate,
+      ],
       home: SplashScreen(),
     );
   }
